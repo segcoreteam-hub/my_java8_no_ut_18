@@ -18,6 +18,10 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- maven-compiler-plugin 3.13.0 is required for <release>25</release> support.
+                     The guidance to use an older plugin for Maven < 3.9.0 is intentionally not
+                     followed here: the local Maven is 3.8.4 and `mvn clean install` with JDK 25
+                     succeeds with 3.13.0 (bytecode major version 69). -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
